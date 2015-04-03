@@ -10,3 +10,5 @@ github_username:  gmmt
 
 # Build settings
 markdown: kramdown
+gems:
+  - jekyll-sitemap
