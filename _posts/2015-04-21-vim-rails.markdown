@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Ruby On Rails Development With Vim"
+date:   2015-04-02 22:13:27
+categories: ruby
+---
+
+I will list some useful commands that I use often.
+
+#[ vim-bundle](https://github.com/tpope/vim-bundler)
+`:Bopen[!] [gem]`         With no argument, edits the Gemfile.  Otherwise,
+                        effectively does a `bundle open` of a gem inside of
+                        Vim, including an |:lcd| to the gem's root directory.
+                        Add ! to discard the current buffer's changes.
+
+`:Bsplit[!] [gem]`        Like |:Bopen|, but horizontally split.  Add ! to
+                        suppress the |:lcd|.
+                        This is very useful, you can navigate the gem in the same window.
+
+#[ ctrl-p ]( https://github.com/kien/ctrlp.vim )
+
+`:CtrlP [starting-directory]`
+   Open CtrlP in find file mode.
+
+   If no argument is given, the value of |g:ctrlp_working_path_mode| will be
+   used to determine the starting directory.
+
+   You can use <tab> to auto-complete the [starting-directory] when typing it.
+
+`:CtrlPTag`
+Tag mode:
+
+* Name: 'tag'
+* Command: ":CtrlPTag"
+* Search for a tag within a generated central tags file, and jump to the
+      definition. Use the Vim's option |'tags'| to specify the names and the
+      locations of the tags file(s).
+      E.g. set tags+=doc/tags
+
+Better to have a shortcut for this:
+`nnoremap <leader>. :CtrlPTag<cr> `
