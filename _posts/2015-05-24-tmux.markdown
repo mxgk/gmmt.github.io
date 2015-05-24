@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "TMux"
+date:   2015-05-24 22:13:27
+categories: tools
+---
+
+## Tmux
+Tmux is a tool which allows multiplexing terminals inside a single terminal.
+
+## Pane
+A terminal.
+
+## Window
+A window can contain multiple panes (terminals). Keep related panes in same window to see all. For example while I'm writing this post, there're 2  
+panes on my window:
+* A pane for vim
+* A pane for running `jekyll serve`
+
+## Session
+A session may contain multiple windows. Typically I create a session for each different project.
+
+## ~/.tmux.conf
+Contains configuration parameters for tmux. Here's mine:
+
+
+{% highlight bash %}
+# Tmux default is Ctrl+b, but for me it's easier to press Ctrl+a. At least I can do it with my single hand.
+unbind C-b
+set -g prefix C-a
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+
+# invoke reattach-to-user-namespace every time a new window/pane opens
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+#
+# start selecting text typing 'v' key (once you are in copy mode)
+bind-key -t vi-copy v begin-selection
+# copy selected text to the system's clipboard
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+{% endhighlight %}

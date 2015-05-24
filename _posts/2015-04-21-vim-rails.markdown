@@ -39,3 +39,10 @@ Tag mode:
 
 Better to have a shortcut for this:
 `nnoremap <leader>. :CtrlPTag<cr> `
+
+##How to edit a gem in same vim window?
+Another useful command is: `Btabedit <gem>`
+This will open gem in new tab. Working directory is set to root of gem. Then you can use following commands to navigate inside opened gem : 
+ctrlp: Open a file 
+\c: Find file of entered tag 
+g]: List files of selected tag
