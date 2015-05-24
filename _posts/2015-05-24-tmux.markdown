@@ -5,8 +5,7 @@ date:   2015-05-24 22:13:27
 categories: tools
 ---
 
-## Tmux
-Tmux is a tool which allows multiplexing terminals inside a single terminal.
+Tmux is a tool which allows multiplexing terminals inside a single terminal. If you're sick of terminal mess, give it a try, you'll like it.
 
 ## Pane
 A terminal.
