@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "TMux"
+title:  "Tmux"
 date:   2015-05-24 22:13:27
 categories: tools
 ---
@@ -40,3 +40,38 @@ bind-key -t vi-copy v begin-selection
 # copy selected text to the system's clipboard
 bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 {% endhighlight %}
+
+## Cheatsheet
+
+### Sessions
+* tmux : Start a new session
+* tmux new -s session_name : Start a new session with name
+* tmux ls : List sessions
+* tmux attach-session -t session_name or session_number : Attach current terminal to session
+* tmux kill-session -t session_name : Kill session
+* Prefix + s : List sessions
+* d : Detach
+
+### Windows
+* c : Create a new window
+* & : Kill window
+* , : Name window
+* w : List window
+* X : Go-to window (number)
+* p,n : Go to next/previous window
+
+### Panes
+* % : Create a vertical pane
+* " : Create a horizontal pane
+* x : Close pane
+* arrow buttons: navigate through panes
+* o : next pane
+
+### Copy
+* [ : Start copy mode, then select text by using vi style selection ( v, Shift+v, w, h, j, k,l)
+* y : copy
+* ] : Paste
+
+## Usefull Links
+[Tmux Crach Course](http://tangosource.com/blog/a-tmux-crash-course-tips-and-tweaks/)
+
